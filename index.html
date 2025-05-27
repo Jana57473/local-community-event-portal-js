@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Local Community Event Portal - JavaScript Exercises</title>
+  <style>
+    body { font-family: Arial, sans-serif; background: #f5f7fa; margin: 0; padding: 20px; }
+    .event-card { background: #fff; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.1); margin: 1rem 0; padding: 1rem; }
+    .hidden { display: none; }
+    .success { color: green; }
+    .error { color: red; }
+    .spinner { display: inline-block; width: 24px; height: 24px; border: 3px solid #eee; border-top: 3px solid #007bff; border-radius: 50%; animation: spin 1s linear infinite; }
+    @keyframes spin { 100% { transform: rotate(360deg); } }
+  </style>
+</head>
+<body>
+  <h1>Local Community Event Portal</h1>
+
+  <!-- Filter and Search -->
+  <div>
+    <label for="categoryFilter">Filter by Category:</label>
+    <select id="categoryFilter">
+      <option value="all">All</option>
+      <option value="music">Music</option>
+      <option value="workshop">Workshop</option>
+      <option value="sports">Sports</option>
+    </select>
+    <input type="text" id="searchInput" placeholder="Search events by name...">
+  </div>
+
+  <!-- Event List -->
+  <div id="eventsContainer"></div>
+
+  <!-- Registration Form -->
+  <h2>Register for an Event</h2>
+  <form id="registrationForm">
+    <input type="text" name="name" placeholder="Your Name" required>
+    <input type="email" name="email" placeholder="Your Email" required>
+    <select name="event" required>
+      <option value="">Select Event</option>
+    </select>
+    <button type="submit" id="registerBtn">Register</button>
+    <span id="formSpinner" class="spinner hidden"></span>
+    <div id="formMessage"></div>
+  </form>
+
+  <!-- jQuery for Exercise 14 -->
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+  <!-- Main JS -->
+  <script src="main.js"></script>
+</body>
+</html>
